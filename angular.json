@@ -3,9 +3,34 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "golden-age": {
+    "golden-age-angular": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:class": {
+          "skipTests": true
+        },
+        "@schematics/angular:component": {
+          "skipTests": true
+        },
+        "@schematics/angular:directive": {
+          "skipTests": true
+        },
+        "@schematics/angular:guard": {
+          "skipTests": true
+        },
+        "@schematics/angular:interceptor": {
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
+        },
+        "@schematics/angular:resolver": {
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -13,7 +38,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/golden-age",
+            "outputPath": "dist/golden-age-angular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -64,10 +89,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "golden-age:build:production"
+              "browserTarget": "golden-age-angular:build:production"
             },
             "development": {
-              "browserTarget": "golden-age:build:development"
+              "browserTarget": "golden-age-angular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -75,7 +100,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "golden-age:build"
+            "browserTarget": "golden-age-angular:build"
           }
         },
         "test": {
@@ -97,5 +122,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "6c3a062c-e0cc-4457-84b1-6d2208b12f46"
   }
 }
